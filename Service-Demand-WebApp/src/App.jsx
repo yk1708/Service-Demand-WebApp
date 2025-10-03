@@ -5,10 +5,12 @@ import UserLogin from "./pages/User/UserLogin";
 import UserSignup from "./pages/User/UserSignup";
 import ProviderLogin from "./pages/Provider/ProviderLogin";
 import ProviderSignup from "./pages/Provider/ProviderSignup";
+import Navbar from "./component/NavBar";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar /> {/* ✅ Include Navbar */}
       <Routes>
         {/* Public pages */}
         <Route path="/" element={<Splash />} />
