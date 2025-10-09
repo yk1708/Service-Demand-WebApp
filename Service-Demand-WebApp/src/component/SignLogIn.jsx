@@ -1,13 +1,24 @@
 // AuthModal.jsx
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 
 export default function SignLogIn({ SignLogInOpen, setSignLogInOpen }) {
   const [isSignup, setIsSignup] = useState(true);
   const [userType, setUserType] = useState("user");
+  const navigate = useNavigate();
 
   if (!SignLogInOpen) return null; 
-
+  
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    // Perform login logic here (e.g., validate form, call API)
+    const loginSuccess = true; // Replace with actual login result
+    if (loginSuccess) {
+      navigate("/dashboard"); // Redirect to dashboard after successful login
+    }
+  };
   return (
     <div className="fixed inset-0 bg-[#012b39]/50 backdrop-blur-md z-50 flex items-center justify-center px-4">
       <div className="bg-white rounded-lg p-6 w-full max-w-md relative text-black shadow-xl">
@@ -52,7 +63,7 @@ export default function SignLogIn({ SignLogInOpen, setSignLogInOpen }) {
             : "Provider Log In"}
         </h2>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleLogin}>
           {isSignup && (
             <input
               type="text"

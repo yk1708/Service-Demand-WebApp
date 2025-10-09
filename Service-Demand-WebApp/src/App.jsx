@@ -1,20 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Splash from "./pages/splashPage/Splash";
 import RoleSelection from "./pages/RolePage/RoleSelection";
 import UserLogin from "./pages/User/UserLogin";
 import UserSignup from "./pages/User/UserSignup";
 import ProviderLogin from "./pages/Provider/ProviderLogin";
 import ProviderSignup from "./pages/Provider/ProviderSignup";
+import Dashboard from "./pages/MainDashboard/Dashboard";
 import Navbar from "./component/NavBar";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar /> {/* ✅ Include Navbar */}
+      <Navbar /> 
       <Routes>
-        {/* Public pages */}
-        <Route path="/" element={<Splash />} />
-        <Route path="/roleselection" element={<RoleSelection />} />
+
+        <Route path="/" element={<RoleSelection />} />
 
         {/* User pages */}
         <Route path="/user/login" element={<UserLogin />} />
@@ -23,6 +22,8 @@ function App() {
         {/* Provider pages */}
         <Route path="/provider/login" element={<ProviderLogin />} />
         <Route path="/provider/signup" element={<ProviderSignup />} />
+
+         <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Fallback */}
         <Route path="*" element={<div>404 Page Not Found</div>} />
