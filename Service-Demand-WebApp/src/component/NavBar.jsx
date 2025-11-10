@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-[#206880] text-white shadow-md">
+      <nav className="sticky top-0 z-50 bg-[#012b39] text-white shadow-md">
         <div className="mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 max-w-7xl">
           {/* Logo */}
           <div className="flex items-center">
