@@ -230,6 +230,7 @@ function RoleSelection() {
             </div>
           </div>
 
+
           {/* Copyright */}
           <div className="mt-10 sm:mt-12 pt-6 border-t border-gray-600 text-center text-sm sm:text-base text-gray-300">
             &copy; {new Date().getFullYear()} ServiceNow. All rights reserved.
